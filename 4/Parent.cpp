@@ -26,8 +26,8 @@ int main(int argc, char** argv) {
 	si.hStdInput = hChildRd;
 	si.dwFlags |= STARTF_USESTDHANDLES;
 
-	//std::wstring CommandLine(L"C:\\Users\\qvarkk\\Desktop\\laba4_os_final\\Child\\x64\\Debug\\Child.exe");
-	std::wstring CommandLine(L"notepad.exe");
+	std::wstring CommandLine(L"C:\\Users\\qvarkk\\Desktop\\laba4_os_final\\Child\\x64\\Debug\\Child.exe");
+	//std::wstring CommandLine(L"notepad.exe");
 	LPWSTR lpwCmdlLine = &CommandLine[0];
 
 	if (!CreateProcess(NULL, lpwCmdlLine, NULL, NULL, TRUE, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi))
